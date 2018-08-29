@@ -89,42 +89,42 @@ export function getUser() {
 
 export function getSwag() {
   return {
-    type: GET_SWAG,
-    payload: axios.get( URL.swag ).then( response => response.data )
+  type: GET_SWAG,
+  payload: axios.get( URL.swag ).then( response => response.data )
   };
 }
 
 export function searchSwag( category ) {
   return {
-    type: SEARCH_SWAG,
-    payload: axios.get( `${URL.search}?category=${category}` ).then( response => response.data )
+  type: SEARCH_SWAG,
+  payload: axios.get( `${URL.search}?category=${category}` ).then( response => response.data )
   };
 }
 
 export function addToCart( id ) {
   return {
-    type: ADD_TO_CART,
-    payload: axios.post( `${URL.cart}?id=${id}` ).then( response => response.data )
+  type: ADD_TO_CART,
+  payload: axios.post( `${URL.cart}?id=${id}` ).then( response => response.data )
   };
 }
 
 export function removeFromCart( id ) {
   return {
-    type: REMOVE_FROM_CART,
-    payload: axios.delete( `${URL.cart}?id=${id}` ).then( response => response.data )
+  type: REMOVE_FROM_CART,
+  payload: axios.delete( `${URL.cart}?id=${id}` ).then( response => response.data )
   };
 }
 
 export function checkout() {
   return {
-    type: CHECKOUT,
-    payload: axios.post( URL.checkout ).then( response => response.data )
+  type: CHECKOUT,
+  payload: axios.post( URL.checkout ).then( response => response.data )
   };
 }
 
 export function signout( history ) {
   return {
-    type: SIGN_OUT,
-    payload: axios.post( URL.signout ).then( () => history.push('/') )
+  type: SIGN_OUT,
+  payload: axios.post( URL.signout ).then( () => history.push('/') )
   };
 }
