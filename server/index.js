@@ -29,3 +29,7 @@ app.delete( '/api/cart', cart_controller.delete );
 
 const port = process.env.SERVER_PORT || 3000;
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );
+
+//POTENTIAL CONFLICT 
+//  /src/server/index.js deleted
+// restore from current file if disfunctional.
